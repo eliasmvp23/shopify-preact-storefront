@@ -1,0 +1,125 @@
+:root {
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	color-scheme: light dark;
+	color: #444;
+	background: #fafafa;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color: #fff;
+		background: #1c1c1c;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "content-area content-area content-area";
+  }
+  
+  .logo-area { grid-area: logo-area; }
+  
+  .cart-area { grid-area: cart-area; }
+  
+  .left-side { grid-area: left-side; }
+  
+  .content-area { 
+grid-area: content-area;
+margin-left: 15%;
+margin-right: 15%;
+margin-top: 10%;
+margin-bottom: 10%;
+}
+  
+  .footer-left { grid-area: footer-left; }
+  
+  .footer-center { grid-area: footer-center; }
+  
+  .footer-right { grid-area: footer-right; }
+
+  @media screen and (min-width: 1141px){
+  .footer-container {
+    padding:1%;
+    background-color: black;
+    color: aliceblue;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-template-areas:
+      "footer-left footer-center footer-right";
+  }
+}
+@media screen and (max-width: 1140px){
+    .footer-container {
+      padding: 1%;  
+      background-color: black;
+      color: aliceblue;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      grid-template-areas:
+        "footer-left"
+        "footer-center" 
+        "footer-right";
+    }
+  }
+  .header-container {
+    background-color: black;
+    color: aliceblue;
+    top: 0;
+    right: 0;
+    left: 0; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "left-side logo-area cart-area";
+  }
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .swiper-wrapper {
+    max-width: 150px;
+  }
